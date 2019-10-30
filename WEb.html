@@ -1,0 +1,474 @@
+<head>
+<style>
+html, body {
+ height:100%;
+    max-width:100%;
+    margin:0;
+}
+
+
+
+#exit {
+  height:30px;
+  width:30px;
+  background:Blue;
+  border: 1px solid black;
+  border-radius:50px;
+  position:Absolute;
+  top:-30px;
+  z-index:50;
+  right:-15px;
+  -webkit-transition:0.5s;
+  transition:0.5s;
+  cursor:pointer;
+  
+}
+#exit:after {
+  content:"";
+  display:block;
+  height:15px;
+  width:15px;
+  background:transparent;
+  border-radius:50px;
+  position:absolute;
+  top:5px;
+  left:5px;
+  
+  border:3px solid orange;
+  border-top-color:transparent;
+  
+}
+
+#exit:before {
+  content:"";
+  display:block;
+  height:10px;
+  width:3px;
+  background:orange;
+  z-index:70;
+  position:Absolute;
+  right:13px;
+  top:6px;
+  
+}
+#circle {
+  height:40px;
+  width:40px;
+  background:transparent;
+  border:1px solid white;
+  border-radius:50px;
+  position:absolute;
+  top:-35px;
+  z-index:40;
+  right:-20px;
+  
+}
+
+#exit:hover {
+  background:#7A0000;
+  
+}
+
+
+
+#allthethings {
+  width:0px;
+  height:0px;
+  border-left: 300px solid transparent;
+  border-right:300px solid transparent;
+  border-top: 300px solid transparent;
+  position:relative;
+   margin:auto;
+  top:5px;
+  left:2px;
+ 
+}
+
+#single {
+  
+  position:relative;
+  bottom:330px;
+  right:300px;
+  height:50px;
+  width:600px;
+  background:Blue;
+  text-align:center;
+  font-size:30px;
+ background-size: 1px 300%;
+ -webkit-transition:0.5s;
+  transition:0.5s;
+  color:Magenta;
+  font-family:shadows into light;
+  
+  cursor:pointer;
+  
+  
+  
+}
+
+#single:hover {
+  background:#072ba5;
+  color:white;
+-webkit-transform:rotate(-1deg);
+  transform:rotate(-2deg);
+  
+  
+}
+
+#multiplayer:hover {
+  background:#072ba5;
+  color:white;
+   
+  -webkit-transform:rotate(-2deg);
+  transform:rotate(-2deg);
+  
+  
+}
+
+#credits:hover {
+  background:#072ba5;
+  color:white;
+  -webkit-transform:rotate(-2deg);
+  transform:rotate(-2deg);
+  
+}
+
+#options:hover {
+  background:#072ba5;
+  color:white;
+  -webkit-transform:rotate(-2deg);
+  transform:rotate(-2deg);
+  
+}
+
+#left {
+  height:100px;
+    width:600px;
+  background:lightblue;
+  position:absolute;
+  z-index:6;
+  -webkit-transform:rotate(45deg);
+  transform:rotate(45deg);
+  top:-175px;
+  right:-104px;
+  border-top:1px solid white;
+  
+}
+#right {
+  height:100px;
+  width:600px;
+  background:lightblue;
+  position:absolute;
+  top:-229px;
+  -webkit-transform:rotate(-45deg);
+  transform:rotate(-45deg);
+  z-index:7;
+  left:-56px;
+  border-top:1px solid white;
+  
+  
+}
+
+
+
+#single p {
+  position:relative;
+  top:2px;
+  right:4px;
+  
+  
+}
+
+#multiplayer {
+  height:50px;
+  width:500px;
+  background:Blue;
+  position:relative;
+  bottom:345px;
+  right:240px;
+  text-align:center;
+  font-size:30px;
+  font-family:shadows into light;
+  color:Magenta;
+   -webkit-transition:0.5s;
+  transition:0.5s;
+  cursor:pointer;
+  
+   
+  
+}
+#multiplayer p {
+  position:relative;
+  top:0px;
+  right:9px;
+  
+}
+
+#options {
+  
+  height:50px;
+  width:400px;
+  background:Blue;
+  position:relative;
+  bottom:360px;
+  right:200px;
+  font-size:30px;
+  text-align:center;
+  font-family:shadows into light;
+  color:Magenta;
+   -webkit-transition:0.5s;
+  transition:0.5s;
+  cursor:pointer;
+  
+}
+
+#options p {
+  position:relative;
+  top:0px;
+  right:4px;
+  
+}
+
+#credits {
+  height:50px;
+  width:300px;
+  position:relative;
+  background:Blue;
+  bottom:375px;
+  font-size:30px;
+  right:150px;
+  text-align:center;
+  font-family:shadows into light;
+  color:Magenta;
+   -webkit-transition:0.5s;
+  transition:0.5s;
+  cursor:pointer;
+  
+}
+
+#credits p {
+  position:relative;
+  top:0px;
+  
+}
+
+/* awan */
+.sky {
+  height: 100%;
+  background: #007fd5;
+  position: relative;
+  overflow: hidden;
+  -webkit-animation: sky_background 50s ease-out infinite;
+  -moz-animation: sky_background 50s ease-out infinite;
+  -o-animation: sky_background 50s ease-out infinite;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0)
+}
+
+.moon {
+  background: url("http://i.imgur.com/wFXd68N.png");
+  position: absolute;
+  left: 0;
+  height: 300%;
+  width: 300%;
+  -webkit-animation: moon 50s linear infinite;
+  -moz-animation: moon 50s linear infinite;
+  -o-animation: moon 50s linear infinite;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0)
+}
+
+.clouds_one {
+  background: url("http://www.scri8e.com/stars/PNG_Clouds/zc06.png?filename=./zc06.png&w0=800&h0s=289&imgType=3&h1=50&w1=140");
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 300%;
+  -webkit-animation: cloud_one 50s linear infinite;
+  -moz-animation: cloud_one 50s linear infinite;
+  -o-animation: cloud_one 50s linear infinite;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0)
+}
+
+.clouds_two {
+  background: url("http://freepngimages.com/wp-content/uploads/2016/02/clouds-transparent-background-2.png");
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 300%;
+  -webkit-animation: cloud_two 75s linear infinite;
+  -moz-animation: cloud_two 75s linear infinite;
+  -o-animation: cloud_two 75s linear infinite;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0)
+}
+
+.clouds_three {
+  background: url("http://montanaflynn.me/lab/css-clouds/images/cloud_three.png");
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 300%;
+  -webkit-animation: cloud_three 100s linear infinite;
+  -moz-animation: cloud_three 100s linear infinite;
+  -o-animation: cloud_three 100s linear infinite;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0)
+}
+
+@-webkit-keyframes sky_background {
+  0% {
+    background: #007fd5;
+    color: #007fd5
+  }
+  50% {
+    background: #000;
+    color: #a3d9ff
+  }
+  100% {
+    background: #007fd5;
+    color: #007fd5
+  }
+}
+
+@-webkit-keyframes moon {
+  0% {
+    opacity: 0;
+    left: -200% -moz-transform: scale(0.5);
+    -webkit-transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    -moz-transform: scale(1);
+    left: 0% bottom: 250px;
+    -webkit-transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    bottom: 500px;
+    -moz-transform: scale(0.5);
+    -webkit-transform: scale(0.5);
+  }
+}
+
+@-webkit-keyframes cloud_one {
+  0% {
+    left: 0
+  }
+  100% {
+    left: -200%
+  }
+}
+
+@-webkit-keyframes cloud_two {
+  0% {
+    left: 0
+  }
+  100% {
+    left: -200%
+  }
+}
+
+@-webkit-keyframes cloud_three {
+  0% {
+    left: 0
+  }
+  100% {
+    left: -200%
+  }
+}
+
+@-moz-keyframes sky_background {
+  0% {
+    background: #007fd5;
+    color: #007fd5
+  }
+  50% {
+    background: #000;
+    color: #a3d9ff
+  }
+  100% {
+    background: #007fd5;
+    color: #007fd5
+  }
+}
+
+@-moz-keyframes moon {
+  0% {
+    opacity: 0;
+    left: -200% -moz-transform: scale(0.5);
+    -webkit-transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    -moz-transform: scale(1);
+    left: 0% bottom: 250px;
+    -webkit-transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    bottom: 500px;
+    -moz-transform: scale(0.5);
+    -webkit-transform: scale(0.5);
+  }
+}
+
+@-moz-keyframes cloud_one {
+  0% {
+    left: 0
+  }
+  100% {
+    left: -200%
+  }
+}
+
+@-moz-keyframes cloud_two {
+  0% {
+    left: 0
+  }
+  100% {
+    left: -200%
+  }
+}
+
+@-moz-keyframes cloud_three {
+  0% {
+    left: 0
+  }
+  100% {
+    left: -200%
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div id="allthethings">
+	<div id="single"><p onclick="window.location.href='https://mmtc.ac.id'">SINGLEPLAYER</p></div>
+  <div id="multiplayer"><p onclick="window.location.href='https://youtube.com'">MULTIPLAYER</p></div>
+  <div id="options"><p onclick="window.location.href='https://facebook.com'">OPTIONS</p></div>
+  <div id="credits"><p onclick="window.location.href='https://twitter.com'">CREDITS</p></div>
+  <div id="exit"></div>
+  <div id="circle"></div>
+  <div id="left"></div>
+  <div id="right"></div>
+</div>
+ <div class="sky">
+    <div class="moon"></div>
+    <div class="clouds_two"></div>
+    <div class="clouds_one"></div>
+    <div class="clouds_three"></div>
+</div>
+
+  
+  </body>
